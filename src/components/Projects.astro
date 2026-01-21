@@ -1,13 +1,14 @@
 ---
-import pouches from "../assets/pouches.jpg";
-import books from "../assets/books.jpg";
-import sewing from "../assets/sewing.jpg";
+import pouches from "../assets/projects-pouches.jpg";
+import bookSleeves from "../assets/projects-book-sleeve.jpg";
+import laptopSleeves from "../assets/projects-laptop-sleeve.jpg";
+import scarves from "../assets/projects-scarves.jpg";
 
 const projects = [
   { img: pouches, title: "Pouches" },
-  { img: sewing, title: "Workshop" },
-  { img: books, title: "Book Sleeves" },
-  { img: pouches, title: "Details" },
+  { img: bookSleeves, title: "Book Sleeves" },
+  { img: laptopSleeves, title: "Laptop Sleeves" },
+  { img: scarves, title: "Scarves" },
 ];
 ---
 
@@ -40,9 +41,7 @@ const projects = [
   </div>
 
   <!-- Carousel Container -->
-  <div
-    class="flex overflow-x-auto pb-8 gap-6 snap-x snap-mandatory -mx-8 px-8 md:mx-0 md:px-0 no-scrollbar"
-  >
+  <div class="flex overflow-x-auto pb-8 gap-6 snap-x snap-mandatory -mx-8 px-8 md:mx-0 md:px-0 no-scrollbar">
     {
       projects.map((item) => (
         <div class="snap-center shrink-0 w-[80vw] md:w-[400px] h-[500px] relative rounded-lg overflow-hidden group">
