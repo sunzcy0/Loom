@@ -1,0 +1,74 @@
+---
+import pouches from "../assets/pouches.jpg";
+import books from "../assets/books.jpg";
+import sewing from "../assets/sewing.jpg";
+
+const projects = [
+  { img: pouches, title: "Pouches" },
+  { img: sewing, title: "Workshop" },
+  { img: books, title: "Book Sleeves" },
+  { img: pouches, title: "Details" },
+];
+---
+
+<div
+  id="projects"
+  class="bg-[#CDB5B1] px-8 py-20 md:py-32 lg:px-24 overflow-hidden"
+>
+  <div class="max-w-6xl mx-auto mb-16">
+    <p
+      class="text-sm md:text-base font-medium tracking-widest text-white/90 uppercase mb-4"
+    >
+      Our work
+    </p>
+    <h3
+      class="text-3xl md:text-5xl lg:text-6xl font-serif text-white leading-tight mb-8"
+    >
+      Explore our collection of handcrafted textiles
+    </h3>
+
+    <ol
+      class="list-disc list-inside text-lg md:text-xl text-white/90 font-light space-y-2 ml-4"
+    >
+      <li>Pouches</li>
+      <li>Scarves</li>
+      <li>Handkerchiefs</li>
+      <li>Tote Bags</li>
+      <li>Book Sleeves</li>
+      <li>Laptop Sleeves</li>
+    </ol>
+  </div>
+
+  <!-- Carousel Container -->
+  <div
+    class="flex overflow-x-auto pb-8 gap-6 snap-x snap-mandatory -mx-8 px-8 md:mx-0 md:px-0 no-scrollbar"
+  >
+    {
+      projects.map((item) => (
+        <div class="snap-center shrink-0 w-[80vw] md:w-[400px] h-[500px] relative rounded-lg overflow-hidden group">
+          <img
+            src={item.img.src}
+            alt={item.title}
+            class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+          />
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition duration-500" />
+          <div class="absolute bottom-6 left-6">
+            <p class="text-white font-serif text-2xl">{item.title}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>
