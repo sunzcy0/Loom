@@ -1,18 +1,21 @@
 ---
 import heroImage from "../assets/pouches.jpg";
+//primary color #CDB5B1
+//secondary color #FFF9F3
+//tertiary color #E6E6FA
 ---
 
-<div id="hero" class="">
-  <section title="text" class="">
-    <p class="">
+<div id="hero" class="flex flex-col md:flex-row items-center justify-between bg-[#CDB5B1]/90">
+  <section title="text" class="flex flex-col font-serif text-white p-8">
+    <p class="pb-4">
       Sewing Studio in El Salvador
     </p>
-    <h2 class="">
+    <h2 class="text-4xl font-bold">
       “Every stitch, with purpose, shaping timeless pieces.”
     </h2>
   </section>
-  <section title="image" class="">
-    <img src={heroImage.src} alt="Pouches" class=""/>
+  <section title="image" class="w-full md:max-w-[500px] aspect-square relative md:w-auto overflow-hidden" >
+    <img src={heroImage.src} alt="Pouches" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"/>
   </section>
 </div>
   
