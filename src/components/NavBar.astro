@@ -4,20 +4,55 @@
 //tertiary color #E6E6FA
 ---
 
-
-<div class="sticky top-0 z-50 flex flex-wrap items-center justify-between h-auto p-4 font-sans font-normal text-white shadow-sm bg-[#CDB5B1]/90 backdrop-blur-md">
+<div
+  class="sticky top-0 z-50 flex flex-wrap items-center justify-between h-auto p-4 font-sans font-normal text-white shadow-sm bg-[#CDB5B1]/90 backdrop-blur-md"
+>
   <h1 class="text-2xl font-bold tracking-tight">Loom</h1>
-  <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
-    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+  <button
+    id="menu-toggle"
+    class="block md:hidden text-white focus:outline-none"
+  >
+    <svg
+      class="w-8 h-8"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16m-7 6h7"></path>
     </svg>
   </button>
-  <nav id="mobile-menu" class="hidden absolute top-16 right-0 w-48 bg-[#CDB5B1]/90 backdrop-blur-md shadow-lg p-4 md:relative md:top-0 md:bg-transparent md:shadow-none md:p-0 md:flex md:w-auto">
+  <nav
+    id="mobile-menu"
+    class="hidden absolute top-16 right-0 w-48 bg-[#CDB5B1]/90 backdrop-blur-md shadow-lg p-4 md:relative md:top-0 md:bg-transparent md:shadow-none md:p-0 md:flex md:w-auto"
+  >
     <ul class="flex flex-col md:flex-row gap-4 justify-end items-center">
-      <li class="text-sm uppercase tracking-wide"><a href="#hero" class="transition-colors duration-300 hover:text-gray-500">Home</a></li>
-      <li class="text-sm uppercase tracking-wide"><a href="#about" class="transition-colors duration-300 hover:text-gray-500">About</a></li>
-      <li class="text-sm uppercase tracking-wide"><a href="#projects" class="transition-colors duration-300 hover:text-gray-500">Projects</a></li>
-      <li class="text-sm uppercase tracking-wide"><a href="#contact-us" class="transition-colors duration-300 hover:text-gray-500">Contact Us</a></li>
+      <li class="text-sm uppercase tracking-wide">
+        <a
+          href="#hero"
+          class="transition-colors duration-300 hover:text-gray-500">Home</a>
+      </li>
+      <li class="text-sm uppercase tracking-wide">
+        <a
+          href="#about"
+          class="transition-colors duration-300 hover:text-gray-500">About</a>
+      </li>
+      <li class="text-sm uppercase tracking-wide">
+        <a
+          href="#projects"
+          class="transition-colors duration-300 hover:text-gray-500"
+          >Projects</a>
+      </li>
+      <li class="text-sm uppercase tracking-wide">
+        <a
+          href="#contact"
+          class="transition-colors duration-300 hover:text-gray-500"
+          >Contact Us</a>
+      </li>
     </ul>
   </nav>
 </div>
@@ -27,7 +62,6 @@
   const mobileMenu = document.getElementById("mobile-menu");
   if (menuToggle && mobileMenu) {
     menuToggle.addEventListener("click", () => {
-
       mobileMenu.classList.toggle("hidden");
     });
   }
