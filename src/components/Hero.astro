@@ -1,0 +1,96 @@
+---
+import heroImage from "../assets/pouches.jpg";
+//primary color #CDB5B1
+//secondary color #FFF9F3
+//tertiary color #E6E6FA
+---
+
+<section id="hero" class="bg-[#FFF9F3] min-h-[90vh] flex items-center">
+  <div
+    class="container mx-auto px-6 md:px-12 flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-24"
+  >
+    <section
+      title="text"
+      class="flex flex-col justify-center items-center lg:items-start text-center lg:text-left font-serif p-8 space-y-8 max-w-2xl"
+    >
+      <p
+        class="font-['Inter',sans-serif] uppercase tracking-widest text-xs border border-[#CDB5B1] rounded-full px-4 py-1.5 w-fit"
+      >
+        Sewing Studio in El Salvador
+      </p>
+      <h2
+        class="font-['Playfair_Display',serif] text-5xl md:text-7xl leading-tight text-gray-900"
+      >
+        Every stitch, with purpose, <span class="italic text-[#CDB5B1]"
+          >shaping</span
+        > timeless pieces.
+      </h2>
+      <div
+        title="buttons"
+        class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
+      >
+        <a href="#projects">
+          <button
+            class="bg-[#CDB5B1] text-white rounded-full px-10 py-4 hover:-translate-y-1 transition-all shadow-lg shadow-[#CDB5B1]/30 font-['Inter',sans-serif] tracking-wide text-sm font-medium"
+            >View Products</button
+          >
+        </a>
+        <a href="#contact">
+          <button
+            class="bg-transparent border border-gray-300 text-gray-500 rounded-full px-10 py-4 hover:border-[#CDB5B1] transition-all hover:text-[#CDB5B1] hover:bg-white font-['Inter',sans-serif] tracking-wide text-sm font-medium"
+            >Contact</button
+          >
+        </a>
+      </div>
+    </section>
+
+    <div
+      title="image"
+      class="w-full md:max-w-[500px] aspect-square relative md:w-auto group"
+    >
+      <div
+        class="rounded-[2rem] shadow-2xl overflow-hidden w-full h-full border border-white/50"
+      >
+        <img
+          src={heroImage.src}
+          alt="Pouches"
+          class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+        />
+      </div>
+      <!-- Floating Badge -->
+      <div
+        class="absolute -bottom-6 -left-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hidden md:flex items-center gap-3 border border-white/50 animate-bounce-slow"
+      >
+        <div class="bg-[#FFF9F3] p-2 rounded-full text-[#CDB5B1]">
+          <!-- Simple Icon -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path
+              d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.77.78-.77-.78a5.4 5.4 0 0 0-7.65 7.65l.77.78 7.65 7.65 7.65-7.65.77-.78a5.4 5.4 0 0 0 0-7.65Z"
+            ></path></svg
+          >
+        </div>
+        <div>
+          <p
+            class="font-['Playfair_Display',serif] text-lg text-gray-900 font-bold leading-none"
+          >
+            100%
+          </p>
+          <p
+            class="text-gray-500 text-[10px] font-bold uppercase tracking-wider font-['Inter',sans-serif] mt-1"
+          >
+            Handmade
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,96 @@
+---
+import pouches from "../assets/projects-pouches.jpg";
+import bookSleeves from "../assets/projects-book-sleeve.jpg";
+import laptopSleeves from "../assets/projects-laptop-sleeve.jpg";
+import scarves from "../assets/projects-scarves.jpg";
+
+const projects = [
+  { img: pouches, title: "Pouches" },
+  { img: bookSleeves, title: "Book Sleeves" },
+  { img: laptopSleeves, title: "Laptop Sleeves" },
+  { img: scarves, title: "Scarves" },
+];
+
+const categories = [
+  "Pouches",
+  "Scarves",
+  "Handkerchiefs",
+  "Tote Bags",
+  "Book Sleeves",
+  "Laptop Sleeves",
+];
+---
+
+<section id="projects" class="py-24 bg-[#FFF9F3] relative">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 lg:px-16">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+      
+      <!-- Left Content (Sticky Sidebar) -->
+      <div class="lg:col-span-4 lg:sticky lg:top-32 h-fit space-y-8 order-1">
+        <div class="space-y-4">
+          <span class="inline-block text-[#CDB5B1] font-bold tracking-[0.2em] text-sm uppercase font-['Inter',sans-serif]">
+            Our Work
+          </span>
+          <h2 class="text-4xl md:text-5xl font-['Playfair_Display',serif] text-[#2A2A2A] leading-tight">
+            Explore our handcrafted collection
+          </h2>
+          <p class="text-gray-600 font-['Inter',sans-serif] font-light leading-relaxed">
+            From everyday essentials to delicate accessories, each piece is stitched with intention and designed to last.
+          </p>
+        </div>
+
+        <!-- Desktop Category List -->
+        <div class="hidden lg:block pt-8 border-t border-[#CDB5B1]">
+          <ul class="space-y-3 font-['Inter',sans-serif]">
+            {categories.map((cat) => (
+              <li class="text-gray-500 hover:text-[#CDB5B1] transition-colors cursor-pointer flex items-center gap-3 group">
+                <span class="w-8 h-[1px] bg-[#CDB5B1] group-hover:bg-[#CDB5B1] transition-colors"></span>
+                {cat}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Content (Gallery Grid with Projects Images) -->
+      <div class="lg:col-span-8 order-2">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {projects.map((item, index) => (
+            <div 
+              class={`group relative overflow-hidden rounded-2xl aspect-[4/5] shadow-lg ${index % 2 === 1 ? 'md:translate-y-12' : ''}`}
+            >
+              <img
+                src={item.img.src}
+                alt={item.title}
+                class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+              />
+              <!-- Gradient Overlay -->
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              
+              <!-- Text Content -->
+              <div class="absolute bottom-0 left-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 class="text-white text-2xl md:text-3xl font-['Playfair_Display',serif] italic">
+                  {item.title}
+                </h3>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <!-- Mobile Category List -->
+        <div class="mt-20 lg:hidden">
+            <h4 class="font-['Playfair_Display',serif] text-2xl text-[#2A2A2A] mb-6">All Categories</h4>
+             <ul class="grid grid-cols-2 gap-4 font-['Inter',sans-serif]">
+            {categories.map((cat) => (
+              <li class="text-gray-600 flex items-center gap-2 text-sm">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#CDB5B1]"></span>
+                {cat}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
