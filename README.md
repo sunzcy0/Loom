@@ -1,46 +1,96 @@
-# Astro Starter Kit: Basics
+# Loom
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Live Demo
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+[View Live Project](https://loom-nine-pi.vercel.app)
 
-## 🚀 Project Structure
+## Screenshots
 
-Inside of your Astro project, you'll see the following folders and files:
+### Desktop
+![Desktop Screenshot](./src/assets/screenshots/home-desktop.png)
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+### Mobile
+![Mobile Screenshot](./src/assets/screenshots/home-mobile.png)
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+---
 
-## 🧞 Commands
+## Overview
 
-All commands are run from the root of the project, from a terminal:
+Loom is a modern landing page built as a personal learning project to strengthen my front-end development skills.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+This project focuses on component-based architecture using Astro, utility-first styling with TailwindCSS, and responsive design implementation from scratch.
 
-## 👀 Want to learn more?
+Rather than only replicating a design, this project challenged me to make design decisions while coding and to think critically about layout, spacing, and user experience.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+---
+
+## Tech Stack
+
+- HTML
+- Astro
+- TailwindCSS
+- JavaScript
+
+Development Environment:
+- Antigravity
+- AI assistance with Gemini (used as learning support, not as a code replacement)
+
+---
+
+## Features
+
+- Responsive design (mobile-first approach)
+- Sidebar navigation with JavaScript toggle functionality
+- Flexbox and Grid layouts
+- Consistent spacing system
+- Modern UI elements (rounded corners, smooth transitions)
+- Minimalist brand-oriented color palette
+
+---
+
+## Design Decisions
+
+- Centered layout to maintain visual clarity and simplicity
+- Strategic typography and color contrast to create visual hierarchy
+- Consistent vertical spacing (e.g., py-16) for rhythm
+- Combined use of Flexbox and Grid depending on layout needs
+- Mobile adaptation handled manually through breakpoints
+
+---
+
+## Challenges
+
+### First Time Using TailwindCSS
+This was my first experience working with TailwindCSS.  
+I gradually learned how to structure utility classes efficiently and identify reusable styling patterns.
+
+### Responsive Design from Scratch
+I implemented responsiveness without templates.  
+This helped me understand breakpoints, layout restructuring, and user-centered adjustments.
+
+### Sidebar Implementation
+Built a responsive sidebar menu using JavaScript to manage state and transitions.
+
+### Version Control Discipline
+Although Git and GitHub were used throughout the project, commit frequency was inconsistent during styling phases.  
+Future iterations will focus on more structured commit practices.
+
+---
+
+## What I Would Improve (v2)
+
+- Proper pre-development design process (wireframes and documentation before coding)
+- Functional contact section
+- More interactive UI elements
+- Cleaner Git workflow
+- Deeper optimization of TailwindCSS structure
+- Stronger JavaScript interactivity
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/sunzcy0/Loom.git
